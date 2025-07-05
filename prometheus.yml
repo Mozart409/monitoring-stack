@@ -9,6 +9,10 @@ scrape_configs:
         labels:
           app: "homelab"
 
+  - job_name: pinchflat
+    static_configs:
+      - targets: ["pinchflat.dropbear-butterfly.ts.net"]
+
 remote_write:
   - url: https://openobserve.dropbear-butterfly.ts.net/api/default/prometheus/api/v1/write
     queue_config:
