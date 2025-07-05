@@ -11,7 +11,7 @@ scrape_configs:
 
   - job_name: pinchflat
     static_configs:
-      - targets: ["pinchflat.dropbear-butterfly.ts.net"]
+      - targets: ["100.88.10.43:8945"]
 
 remote_write:
   - url: https://openobserve.dropbear-butterfly.ts.net/api/default/prometheus/api/v1/write
