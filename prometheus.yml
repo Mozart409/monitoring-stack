@@ -8,10 +8,14 @@ scrape_configs:
       - targets: ["100.70.115.42:9100"]
         labels:
           app: "homelab"
+          os: "linux"
 
   - job_name: pinchflat
     static_configs:
       - targets: ["100.88.10.43:8945"]
+        labels:
+          app: "pinchflat"
+          os: "linux"
 
 remote_write:
   - url: https://openobserve.dropbear-butterfly.ts.net/api/default/prometheus/api/v1/write
