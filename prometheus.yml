@@ -4,9 +4,8 @@ global:
 
 scrape_configs:
   - job_name: "homelab"
-    scheme: https
     static_configs:
-      - targets: ["https://node-exporter.dropbear-butterfly.ts.net"]
+      - targets: ["100.70.115.42:9100"]
         labels:
           app: "homelab"
 
