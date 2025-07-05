@@ -18,5 +18,5 @@ remote_write:
     queue_config:
       max_samples_per_send: 10000
     basic_auth:
-      username: ${PROMETHEUS_USERNAME}
-      password: ${PROMETHEUS_PASSWORD}
+      username: admin@example.com
+      password: e3jAH2APW4LyWn9v
