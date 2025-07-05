@@ -8,3 +8,11 @@ scrape_configs:
       - targets: ["node-exporter.dropbear-butterfly.ts.net"]
         labels:
           app: "homelab"
+
+remote_write:
+  - url: https://openobserve.dropbear-butterfly.ts.net/api/default/prometheus/api/v1/write
+    queue_config:
+      max_samples_per_send: 10000
+    basic_auth:
+      username: ${PROMETHEUS_USERNAME}
+      password: ${PROMETHEUS_PASSWORD}
