@@ -8,5 +8,9 @@ services:
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
       - ./prom_data:/prometheus
+    environment:
+      - PROMETHEUS_USERNAME=${PROMETHEUS_USERNAME}
+      - PROMETHEUS_PASSWORD=${PROMETHEUS_PASSWORD}
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--enable-feature=expand-external-labels"
