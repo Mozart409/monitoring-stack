@@ -3,6 +3,7 @@ services:
     image: quay.io/prometheus/prometheus:v3.4.2
     container_name: prometheus
     restart: unless-stopped
+    user: "1000:1000"
     ports:
       - "9090:9090"
     volumes:
