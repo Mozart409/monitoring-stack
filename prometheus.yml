@@ -5,6 +5,6 @@ global:
 scrape_configs:
   - job_name: "homelab"
     static_configs:
-      - targets: ["https://node-exporter.dropbear-butterfly.ts.net"]
+      - targets: ["node-exporter.dropbear-butterfly.ts.net"]
         labels:
           app: "homelab"
