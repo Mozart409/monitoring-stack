@@ -13,4 +13,7 @@ services:
       - PROMETHEUS_PASSWORD=${PROMETHEUS_PASSWORD}
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
-      - "--enable-feature=expand-external-labels"
+
+volumes:
+  prom_data:
+    driver: local
